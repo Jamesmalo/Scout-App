@@ -1,0 +1,73 @@
+body{
+    background-color: gold;
+}
+
+h1{
+    text-align: center;
+
+}
+.box{
+    height: 200px;
+    width: 20.25%;
+    background-color: rgb(30, 190, 30);
+    display: inline-block;
+    padding: 15px;
+    margin: 15px;
+    margin-top: 25px;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 95px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(30, 190, 30);
+  }
+
+ p{
+      color: black;
+  }
+
+  a:link{
+      text-decoration: none;
+  }
+
+.form{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.bl{
+    text-align: center;
+}
+
+.formB{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+    margin-left: 15px;
+}

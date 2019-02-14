@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Add User</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+    <section>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="addservicehours.html">Add Service Hours</a></li>
+            <li><a href="EditTroopPos.html">Edit Troop Position</a></li>
+            <li><a href="EditTroopNum.html">Edit Troop Number</a></li>
+            <li><a href="BadgeList.html">Badge List</a></li>
+            <li><a href="RankProgress.html">Rank Progress</a></li>
+            <li><a href="YourTroopInfo.html">Your Troop Information</a></li>
+            <li><a href="YourCouncilInfo.html">Your Council Information</a></li>
+          </ul>
+    </section>
+    <section>
+        <h1 class="left">Add a New User Below</h1>
+        <form action="/scoutApp/adduser.php" method="POST"  class="form">
+            First name:<br>
+            <input type="text" name="firstname" value=""><br>
+            Last name:<br>
+            <input type="text" name="lastname" value=""><br>
+            Current Rank:<br>
+            <input type="text" name="currentRank" value=""><br>
+            Date of When You Last Ranked Up:<br>
+            <input type="text" name="dateOfLastRankup" value=""><br>
+            Number of Total Badges Completed:<br>
+            <input type="number" name="numOfBadges" value=""><br>
+            Number of Total Service Hours:<br>
+            <input type="number" name="numOfServiceHours" value=""><br>
+            Troop Number:<br>
+            <input type="number" name="troopNumber" value=""><br>
+            Council Name:<br>
+            <input type="text" name="councilName" value=""><br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </section>
+</body>
+</html>
