@@ -12,29 +12,28 @@ $councilName = $_POST['councilName'];
 $conn;
 
 //loginInfo
-$usr = 'mrflemin_james';
-$pwd = ''; //I have tried it with password in there.
-$db = 'mrflemin_jamesDB';
+$usr = "mrflemin_james";
+$pwd = ""; 
+$db = "mrflemin_jamesDB";
 
-//create connection
+// Create connection
 if (strlen($firstname) > 0 and strlen($lastname) > 0) {
-    $conn = new mysqli('localhost', $usr, $pw, $db);
+    $conn = new mysqli("localhost", $usr, $pw, $db);
 }
 
-//check connection
-if ($conn->connect_error){
+// Check connection
+if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
 $sql = "INSERT INTO scouts (firstname, lastname, currentRank, dateOfLastRankup, numOfBadges, numOfServiceHours, troopNumber, councilName) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $currentRank . "', '" . $dateOfLastRankup . "', '" . $numOfBadges . "', '" . $numOfServiceHours . "', '" . $troopNumber . "', '" . $councilName . "')";
 
-if($conn->query($sql) === true){
-    echo "User info saved!";
-    echo "<a href=\"index.html\" onclick=\"location.reload()\">Go Back to Home Page</a>";
+if ($conn->query($sql) === true) {
+    echo "User Information Saved!";
+    echo "<a href=\"index.html\" onclick=\"location.reload()\">Return to home page</a>";
 } else {
     echo 'Error: ' . $sql . '<br>' . $conn->error;
 }
-
 $conn->close();
 
 ?>

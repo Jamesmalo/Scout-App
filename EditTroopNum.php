@@ -5,9 +5,9 @@ $oldnum = $_POST['oldnum'];
 $newnum = $_POST['newnum'];
 
 //loginInfo
-$usr = mrflemin_james;
-$pwd = ;
-$db = mrflemin_jamesDB;
+$usr = "mrflemin_james";
+$pwd = "";
+$db = "mrflemin_jamesDB";
 
 //create connection
 if (strlen($firstname) > 0 and strlen($lastname) > 0) {

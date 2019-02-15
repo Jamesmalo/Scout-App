@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Badge List</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+    <section>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adduser.html">Add User</a></li>
+            <li><a href="addservicehours.html">Add Service Hours</a></li>
+            <li><a href="EditTroopPos.html">Edit Troop Position</a></li>
+            <li><a href="EditTroopNum.html">Edit Troop Number</a></li>
+            <li><a href="RankProgress.html">Rank Progress</a></li>
+            <li><a href="YourTroopInfo.html">Your Troop Information</a></li>
+            <li><a href="YourCouncilInfo.html">Your Council Information</a></li>
+          </ul>
+    </section>
+    <section>
+        <h1 class="bl">Add a new badge</h1>
+        <form action="/badgeList.php" method="post" class="formB">
+            Name of Badge earned:<br>
+            <input type="text" name="badgename" value=""><br>
+            Date earned:<br>
+            <input type="number" name="dateearned" value=""><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section>
+        <h1>Completed Badges</h1>
+        <h2>will list badges at later date</h2>
+    </section>
+</body>
+</html>
