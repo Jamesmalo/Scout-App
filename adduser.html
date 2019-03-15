@@ -12,32 +12,94 @@
             <li><a href="addservicehours.html">Add Service Hours</a></li>
             <li><a href="EditTroopPos.html">Edit Troop Position</a></li>
             <li><a href="EditTroopNum.html">Edit Troop Number</a></li>
-            <li><a href="BadgeList.html">Badge List</a></li>
-            <li><a href="RankProgress.html">Rank Progress</a></li>
-            <li><a href="YourTroopInfo.html">Your Troop Information</a></li>
-            <li><a href="YourCouncilInfo.html">Your Council Information</a></li>
+            <li><a href="badgeList.html">Badge List</a></li>
+            <li><a href="rankProgress.html">Rank Progress</a></li>
+            <li><a href="troopInfo.html">Your Troop Information</a></li>
+            <li><a href="councilInfo.html">Your Council Information</a></li>
           </ul>
     </section>
-    <section>
-        <h1 class="left">Add a New User Below</h1>
+    <section class="addUser">
+        <h1 class="left">Add a New Scout Below</h1>
         <form action="adduser.php" method="post"  class="form">
             First name:<br>
-            <input type="text" name="firstname"><br>
+            <input type="text" name="first" placeholder="John" class="form"><br>
             Last name:<br>
-            <input type="text" name="lastname"><br>
+            <input type="text" name="last" placeholder="Smith" class="form"><br>
             Current Rank:<br>
-            <input type="text" name="currentRank"><br>
+            <input type="text" name="rank" placeholder="Scout" class="form"><br>
             Date of When You Last Ranked Up:<br>
-            <input type="text" name="dateOfLastRankup"><br>
+            <input type="text" name="rank_date" placeholder="YYYY/MM/DD" class="form"><br>
             Number of Total Badges Completed:<br>
-            <input type="number" name="numOfBadges"><br>
+            <input type="number" name="badges" class="form"><br>
             Number of Total Service Hours:<br>
-            <input type="number" name="numOfServiceHours"><br>
+            <input type="number" name="service_hours" class="form"><br>
             Troop Number:<br>
-            <input type="number" name="troopNumber"><br>
+            <input type="number" name="troop" class="form"><br>
             Council Name:<br>
-            <input type="text" name="councilName"><br><br>
-            <input type="submit" value="submit">
+            <input type="text" name="troop_name" placeholder="Twin Lakes" class="form"><br><br>
+            <input type="submit" value="submit" class="s">
+          </form>
+    </section>
+    <section class="addUser">
+        <h1 class="left">Add a New Leader Below</h1>
+        <form action="addLeader.php" method="post"  class="form">
+            First name:<br>
+            <input type="text" name="first" placeholder="John" class="form"><br>
+            Last name:<br>
+            <input type="text" name="last" placeholder="Smith" class="form"><br>
+            Current Rank:<br>
+            <input type="text" name="rank" placeholder="Scout" class="form"><br>
+            Date of When You Last Ranked Up:<br>
+            <input type="text" name="rank_date" placeholder="YYYY/MM/DD" class="form"><br>
+            Number of Total Badges Completed:<br>
+            <input type="number" name="badges" class="form"><br>
+            Number of Total Service Hours:<br>
+            <input type="number" name="service_hours" class="form"><br>
+            Troop Number:<br>
+            <input type="number" name="troop" class="form"><br>
+            Council Name:<br>
+            <input type="text" name="troop_name" placeholder="Twin Lakes" class="form"><br><br>
+            <input type="submit" value="submit" class="s">
+          </form>
+    </section>
+    <section class="addUser">
+        <h1 class="left">Add a New Troop Below</h1>
+        <form action="addTroop.php" method="post"  class="form">
+            Troop Number:<br>
+            <input type="number" name="number" class="form"><br>
+            Scout Master:<br>
+            <input type="text" name="name" class="form"><br>
+            Council Name:<br>
+            <input type="text" name="council" placeholder="Twin Lakes" class="form"><br>
+            Number of Current Scouts:<br>
+            <input type="number" name="num_scouts" class="form"><br>
+            Number of Leaders:<br>
+            <input type="number" name="num_leaders" class="form"><br>
+            Number of Service Hours:<br>
+            <input type="number" name="total_service" class="form"><br>
+            Number of Camping Nights:<br>
+            <input type="number" name="total_camping" class="form"><br>
+            Zip Code of the Charter:<br>
+            <input type="number" name="zip" class="form"><br><br>
+            <input type="submit" value="submit" class="s">
+          </form>
+    </section>
+    <section class="viewUser">
+        <h1 class="left">View a User</h1>
+        <form action="searchUser.php" method="post" class="form">
+            Search by First or Last Name: <br>
+            Scout Name: <input type="text" name="search" class="form"><br>
+            <input type="submit" value="Search" class="form">
+          </form>
+    </section>
+
+    <section class="deleteUser">
+        <h1 class="left">Delete a User</h1>
+        <form action="deleteUser.php" method="post" class="form">
+            Search by First and Last Name: <br>
+            First Name: <input type="text" name="search" placeholder="John" class="form"><br>
+            Last Name: <input type="text" name="search" placeholder="Smith" class="form"><br>
+            <input type="submit" value="search" class="form">
           </form>
     </section>
 </body>

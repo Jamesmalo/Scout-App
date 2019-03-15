@@ -1,7 +1,7 @@
 <?php
 
 //form info
-$oldpos = $_POST['oldpos'];
+$id = $_POST['id'];
 $newpos = $_POST['newpos'];
 
 //loginInfo
@@ -10,7 +10,7 @@ $pwd = "";
 $db = "mrflemin_jamesDB";
 
 //create connection
-if (strlen($firstname) > 0 and strlen($lastname) > 0) {
+if (strlen($id) > 0 and strlen($newpos) > 0) {
     $conn = new mysqli('localhost', $usr, $pw, $db);
 }
 
@@ -19,7 +19,7 @@ if ($conn->connect_error){
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "INSERT INTO scouts (oldpos, newpos) VALUES ('" . $oldpos . "', '" . $newpos . "')";
+$sql = "UPDATE scouts SET troop = '%" . $newpos .  "%' WHERE id = '%" . $id .  "%';
 
 if($conn->query($sql) === true){
     echo "User info saved!";

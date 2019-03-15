@@ -1,24 +1,24 @@
 <?php 
 
 //form info
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$currentRank = $_POST['currentRank'];
-$dateOfLastRankup = $_POST['dateOfLastRankup'];
-$numOfBadges = $_POST['numOfBadges'];
-$numOfServiceHours = $_POST['numOfServiceHours'];
-$troopNumber = $_POST['troopNumber'];
-$councilName = $_POST['councilName'];
+$firstname = $_POST['first'];
+$lastname = $_POST['last'];
+$rank = $_POST['rank'];
+$rank_date = $_POST['rank_date'];
+$badges = $_POST['badges'];
+$service_hours = $_POST['service_hours'];
+$troop = $_POST['troop'];
+$council_name = $_POST['troop_name'];
 $conn;
 
 //loginInfo
 $usr = "mrflemin_james";
-$pwd = ""; 
+$pwd = "B#kyYHn@jz)L"; 
 $db = "mrflemin_jamesDB";
 
 // Create connection
 if (strlen($firstname) > 0 and strlen($lastname) > 0) {
-    $conn = new mysqli("localhost", $usr, $pw, $db);
+    $conn = new mysqli("localhost", $usr, $pwd, $db);
 }
 
 // Check connection
@@ -26,7 +26,7 @@ if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "INSERT INTO scouts (firstname, lastname, currentRank, dateOfLastRankup, numOfBadges, numOfServiceHours, troopNumber, councilName) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $currentRank . "', '" . $dateOfLastRankup . "', '" . $numOfBadges . "', '" . $numOfServiceHours . "', '" . $troopNumber . "', '" . $councilName . "')";
+$sql = "INSERT INTO scouts (first, last, rank, rank_date, badges, service_hours, troop, troop_name) VALUES ('$firstname','$lastname','$rank','$rank_date','$badges','$service_hours','$troop','$council_name')";
 
 if ($conn->query($sql) === true) {
     echo "User Information Saved!";
@@ -34,6 +34,7 @@ if ($conn->query($sql) === true) {
 } else {
     echo 'Error: ' . $sql . '<br>' . $conn->error;
 }
+
 $conn->close();
 
 ?>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Edit Troop Number</title>
+    <title>Rank Progress</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 <body>
@@ -12,21 +12,19 @@
             <li><a href="adduser.html">Add User</a></li>
             <li><a href="addservicehours.html">Add Service Hours</a></li>
             <li><a href="EditTroopPos.html">Edit Troop Position</a></li>
+            <li><a href="EditTroopNum.html">Edit Troop Number</a></li>
             <li><a href="badgeList.html">Badge List</a></li>
-            <li><a href="rankProgress.html">Rank Progress</a></li>
             <li><a href="troopInfo.html">Your Troop Information</a></li>
             <li><a href="councilInfo.html">Your Council Information</a></li>
           </ul>
     </section>
     <section>
-        <h1 class="left">Edit Your Troop Number</h1>
-        <form action="EditTroopNum.php" method="post" class="form">
-            Scout ID:<br>
-            <input type="number" name="id" value=""><br>
-            New Troop Number:<br>
-            <input type="number" name="newnum" value=""><br><br>
-            <input type="submit" value="submit">
-        </form>
+        <h1>Type your name in to see your current rank</h1>
+        <form action="rankProgress.php" method="post">
+            Search by ID Number: <br>
+            <input type="number" name="search" placeholder="" class="form"><br>
+            <input type="submit" value="search" class="form">
+          </form>
     </section>
 </body>
 </html>

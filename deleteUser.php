@@ -1,9 +1,9 @@
 <?php 
 
 //form info
-
-$name = $_POST['badges'];
-$date = $_POST['date'];
+$firstname = $_POST['first'];
+$lastname = $_POST['last'];
+$id = $_POST['id'];
 $conn;
 
 //loginInfo
@@ -12,7 +12,7 @@ $pwd = "B#kyYHn@jz)L";
 $db = "mrflemin_jamesDB";
 
 // Create connection
-if (strlen($name) > 0 and strlen($date) > 0) {
+if (strlen($firstname) > 0 and strlen($lastname) > 0) {
     $conn = new mysqli("localhost", $usr, $pwd, $db);
 }
 
@@ -21,10 +21,10 @@ if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "INSERT INTO badges (badges, date) VALUES ('$badges','$date')";
+$sql = "DELETE FROM scouts WHERE id = '%" . $id .  "%';
 
 if ($conn->query($sql) === true) {
-    echo "New Badge Added!";
+    echo "User Information Deleted!";
     echo "<a href=\"index.html\" onclick=\"location.reload()\">Return to home page</a>";
 } else {
     echo 'Error: ' . $sql . '<br>' . $conn->error;

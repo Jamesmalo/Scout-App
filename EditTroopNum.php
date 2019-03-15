@@ -1,8 +1,8 @@
 <?php
 
 //form info
-$oldnum = $_POST['oldnum'];
-$newnum = $_POST['newnum'];
+$id = $_POST['id'];
+$newnew = $_POST['newnum'];
 
 //loginInfo
 $usr = "mrflemin_james";
@@ -10,16 +10,15 @@ $pwd = "";
 $db = "mrflemin_jamesDB";
 
 //create connection
-if (strlen($firstname) > 0 and strlen($lastname) > 0) {
-    $conn = new mysqli('localhost', $usr, $pw, $db);
-}
+$conn = new mysqli('localhost', $usr, $pw, $db);
+
 
 //check connection
 if ($conn->connect_error){
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "INSERT INTO scouts (oldnum, newnum) VALUES ('" . $oldnum . "', '" . $newnum . "')";
+$sql = "UPDATE scouts SET troop = '%" . $newnum .  "%' WHERE id = '%" . $id .  "%';
 
 if($conn->query($sql) === true){
     echo "User info saved!";
