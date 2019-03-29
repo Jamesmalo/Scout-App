@@ -1,7 +1,7 @@
 <?php 
 
 //form info
-$id = $_POST['id'];
+$id = $_POST['number'];
 $conn;
 
 //loginInfo
@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "DELETE FROM scouts WHERE id = '$id'";
+$sql = "DELETE FROM troops WHERE number = '$id'";
 
 if ($conn->query($sql) === true) {
     echo "User Information Deleted!";

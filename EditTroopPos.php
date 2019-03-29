@@ -6,7 +6,7 @@ $newpos = $_POST['newpos'];
 
 //loginInfo
 $usr = "mrflemin_james";
-$pwd = "";
+$pwd = "B#kyYHn@jz)L";
 $db = "mrflemin_jamesDB";
 
 //create connection
@@ -19,7 +19,7 @@ if ($conn->connect_error){
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "UPDATE scouts SET troop = '%" . $newpos .  "%' WHERE id = '%" . $id .  "%';
+$sql = "UPDATE scouts SET troop = '$newpos' WHERE id = '$id';
 
 if($conn->query($sql) === true){
     echo "User info saved!";

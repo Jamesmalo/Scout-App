@@ -18,15 +18,15 @@ if ($conn->connect_error) {
   die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql="SELECT  id, first, last, rank, rank_date, badges, service_hours, troop, troop_name FROM scouts WHERE id LIKE '$id'";
+$sql="SELECT  scout_id, first, last, position, troop FROM leaders WHERE scout_id LIKE '$id'";
 $result = $conn->query($sql);
   
 if ($result->num_rows > 0){
-  echo "<table><tr><th>ID</th><th>Name</th><th>Rank</th><th>Date of Last Rank Up</th><th>Number of Badges</th><th>Number of Service Hours</th><th>Troop Number</th><th>Council Name</th></tr>";
+  echo "<table><tr><th>Scout's ID</th><th>Leader's Name</th><th>Position</th><th>Troop Number</th></tr>";
 
   //output data of each row
    while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["id"]."</td><td>".$row["first"]." ".$row["last"]."</td><td>".$row["rank"]."</td><td>".$row["rank_date"]."</td><td>".$row["badges"]."</td><td>".$row["service_hours"]."</td><td>".$row["troop"]."</td><td>".$row["troop_name"]."</td></tr>";
+    echo "<tr><td>".$row["scout_id"]."</td><td>".$row["first"]." ".$row["last"]."</td><td>".$row["position"]."</td><td>".$row["troop"]."</td></tr>";
   };
     echo "</table>";
     echo "<a href=\"index.html\" onclick=\"location.reload()\">Return to home page</a>";

@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "DELETE FROM scouts WHERE id = '$id'";
+$sql = "DELETE FROM leaders WHERE id = '$id'";
 
 if ($conn->query($sql) === true) {
     echo "User Information Deleted!";

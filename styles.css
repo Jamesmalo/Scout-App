@@ -2,10 +2,15 @@ body{
     background-color: gold;
 }
 
-h1{
+.center{
     text-align: center;
 
 }
+
+#h{
+    text-align: center;
+}
+
 .box{
     height: 200px;
     width: 20.25%;
@@ -77,21 +82,6 @@ ul {
 .left{
     text-align: left;
     margin-left: 15px;
-}
-
-.addUser{
-    width: 32%;
-    float: left;
-}
-
-.viewUser{
-    width: 32%;
-    float: left;
-}
-
-.deleteUser{
-    width: 32%;
-    float: left;
 }
 
 button{

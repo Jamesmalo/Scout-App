@@ -1,8 +1,8 @@
 <?php 
 
 //form info
-
-$name = $_POST['badges'];
+$scoutID = $_POST['scout_id'];
+$name = $_POST['badge'];
 $date = $_POST['date'];
 $conn;
 
@@ -12,16 +12,14 @@ $pwd = "B#kyYHn@jz)L";
 $db = "mrflemin_jamesDB";
 
 // Create connection
-if (strlen($name) > 0 and strlen($date) > 0) {
-    $conn = new mysqli("localhost", $usr, $pwd, $db);
-}
+$conn = new mysqli("localhost", $usr, $pwd, $db);
 
 // Check connection
 if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "INSERT INTO badges (badges, date) VALUES ('$badges','$date')";
+$sql = "INSERT INTO badges (scout_id, badges, date) VALUES ('$scoutID','$name','$date')";
 
 if ($conn->query($sql) === true) {
     echo "New Badge Added!";

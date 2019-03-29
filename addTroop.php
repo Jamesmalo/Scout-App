@@ -17,7 +17,7 @@ $pwd = "B#kyYHn@jz)L";
 $db = "mrflemin_jamesDB";
 
 // Create connection
-if (strlen($number) > 0 and strlen($name) > 0) {
+if (strlen($number) > 0 and strlen($name) > 0 and strlen($council) > 0 and strlen($num_scouts) > 0 and strlen($total_service) > 0 and strlen($total_service) > 0 and strlen($zip) > 0 and strlen($num_leaders) > 0) {
     $conn = new mysqli("localhost", $usr, $pwd, $db);
 }
 
