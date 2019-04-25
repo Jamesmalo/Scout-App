@@ -20,8 +20,18 @@
           </ul>
     </section>
     <section>
-        <h1 class="left">Edit Your Troop Position.</h1>
-        <form action="/EditTroopPos.php" method="post" class="form-group form">
+        <h1 class="left">Edit Your Troop Position. (Scouts)</h1>
+        <form action="EditTroopPos.php" method="post" class="form-group form">
+            ID Number:<br>
+            <input type="number" name="id" value=""><br>
+            New Troop Position:<br>
+            <input type="text" name="newpos" value=""><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section>
+        <h1 class="left">Edit Your Troop Position. (Leaders)</h1>
+        <form action="EditLeaderPos.php" method="post" class="form-group form">
             ID Number:<br>
             <input type="number" name="id" value=""><br>
             New Troop Position:<br>

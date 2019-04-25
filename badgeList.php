@@ -1,9 +1,14 @@
 <?php 
 
 //form info
-$scoutID = $_POST['scout_id'];
-$name = $_POST['badge'];
-$date = $_POST['date'];
+$badge_id = $_POST['id'];
+$scout_id = $_POST['scout_id'];
+$name = $_POST['name'];
+$date = $_POST['date'];//yyyymmdd
+
+if(){
+
+}
 $conn;
 
 //loginInfo
@@ -19,7 +24,7 @@ if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "INSERT INTO badges (scout_id, badges, date) VALUES ('$scoutID','$name','$date')";
+$sql = "INSERT INTO badges (id, scout_id, name, date) VALUES ('$badge_id','$scout_id','$name','$date')";
 
 if ($conn->query($sql) === true) {
     echo "New Badge Added!";

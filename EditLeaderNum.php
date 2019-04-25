@@ -1,6 +1,6 @@
 <?php
 
-//form info
+//form info 
 $id = $_POST['id'];
 $newnum = $_POST['newnum'];
 
@@ -19,7 +19,7 @@ if ($conn->connect_error){
     die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql = "UPDATE scouts SET troop = '$newnum' WHERE id = '$id';
+$sql = "UPDATE leaders SET troop = '$newnum' WHERE scout_id = '$id';
 
 if($conn->query($sql) === true){
     echo "User info saved!";

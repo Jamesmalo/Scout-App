@@ -18,15 +18,15 @@ if ($conn->connect_error) {
   die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql="SELECT  leaders.scout_id, scouts.first, scouts.last, leaders.position, scouts.service_hours, leaders.troop FROM leaders INNER JOIN scouts ON leaders.scout_id = scouts.id WHERE scout_id LIKE '$id'";
+$sql="SELECT  * FROM badges WHERE scout_id LIKE '$id'";
 $result = $conn->query($sql);
   
 if ($result->num_rows > 0){
-  echo "<table><tr><th>Scout's ID</th><th>Leader's Name</th><th>Position</th><th>Service Hours</th><th>Troop Number</th><th>Council Name</th></tr>";
+  echo "<table><tr><th>ID</th><th>Name of Badge</th><th>Date Earned</th></tr>";
 
   //output data of each row
    while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["scout_id"]."</td><td>".$row["first"]." ".$row["last"]."</td><td>".$row["position"]."</td><td>".$row["service_hours"]."</td><td>".$row["troop"]."</td><td>".$row["troop_name"]."</td></tr>";
+    echo "<tr><td>".$row["scout_id"]."</td><td>".$row["name"]."</td><td>".$row["date"]."</td></tr>";
   };
     echo "</table>";
     echo "<a href=\"index.html\" onclick=\"location.reload()\">Return to home page</a>";

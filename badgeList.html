@@ -23,11 +23,11 @@
         <h1 class="bl">Add a new badge</h1>
         <form action="badgeList.php" method="post" class="form-group formB">
             Scout ID Number:<br>
-            <input type="number" name="scoutID" value=""><br>
+            <input type="number" name="scout_id"><br>
             Name of Badge earned:<br>
-            <input type="text" name="name" value=""><br>
+            <input type="text" name="name"><br>
             Date earned:<br>
-            <input type="text" name="date" placeholder="YYYY/MM/DD" value=""><br><br>
+            <input type="text" name="date" placeholder="YYYY-MM-DD"><br><br>
             <input type="submit" value="Submit">
         </form>
     </section>
@@ -35,7 +35,7 @@
         <h1 class="center">View Your Completed Badges</h1>
         <form action="searchBadge.php" method="post" class="center">
             Search by Scout ID Number: <br>
-            Scout ID: <input type="number" name="search" class="form"><br>
+            Scout ID: <input type="number" name="id" class="form"><br>
             <input type="submit" value="search" class="form">
         </form>
     </section>

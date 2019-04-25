@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>  
     <meta charset="utf-8" />
     <title>Edit Troop Number</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
@@ -20,12 +20,22 @@
           </ul>
     </section>
     <section>
-        <h1 class="left">Edit Your Troop Number</h1>
+        <h1 class="left">Edit Your Troop Number for Scouts</h1>
         <form action="EditTroopNum.php" method="post" class="form-group form">
             Scout ID:<br>
-            <input type="number" name="id" value=""><br>
+            <input type="number" name="id"><br>
             New Troop Number:<br>
-            <input type="number" name="newnum" value=""><br><br>
+            <input type="number" name="newnum"><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </section>
+    <section>
+        <h1 class="left">Edit Your Troop Number for Leaders</h1>
+        <form action="EditLeaderNum.php" method="post" class="form-group form">
+            Scout ID:<br>
+            <input type="number" name="id"><br>
+            New Troop Number:<br>
+            <input type="number" name="newnum"><br><br>
             <input type="submit" value="submit">
         </form>
     </section>

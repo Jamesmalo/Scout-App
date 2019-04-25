@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Delete User</title>
+    <title>View and Delete User</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -16,32 +16,30 @@
             <li><a href="badgeList.html">Badge List</a></li>
             <li><a href="rankProgress.html">Rank Progress</a></li>
             <li><a href="troopInfo.html">Your Troop Information</a></li>
-            <li><a href="viewUser.html">View a User</a></li>
+            <li><a href="deleteUser.html">Delete User</a></li>
           </ul>
     </section>
-    <section class="deleteUser">
-        <h1 class="left">Delete a User</h1>
-        <form action="deleteUser.php" method="post" class="form">
+    <section>
+        <h1>All current troop's service hours in your council.</h1>
+        <form action="viewTroopServiceHours.php" method="post"  class="form">
+            <input type="submit" value="View" class="form">
+        </form>
+    </section>
+    <section class="viewUser">
+        <h1 class="left">View a Scout's Service Hours</h1>
+        <form action="viewUserServiceHours.php" method="post" class="form-group form">
             Search by Scout ID Number: <br>
-            ID Number: <input type="text" name="id" class="form"><br>
-            <input type="submit" value="Delete User" class="form">
-        </form>
+            ID: <input type="number" name="id" class="form"><br>
+            <input type="submit" value="Search" class="form">
+           </form>
     </section>
-    <section class="deleteUser">
-        <h1 class="left">Delete a leader</h1>
-        <form action="deleteUser.php" method="post" class="form">
-            Search by Leader ID Number: <br>
-            ID Number: <input type="text" name="id" class="form"><br>
-            <input type="submit" value="Delete Leader" class="form">
-        </form>
-    </section>
-    <section class="deleteUser">
-        <h1 class="left">Delete a Troop</h1>
-        <form action="deleteTroop.php" method="post" class="form">
+    <section class="viewUser">
+        <h1 class="left">View all the Troop's Service Hours</h1>
+        <form action="viewYourTroopSH.php" method="post" class="form-group form">
             Search by Troop Number: <br>
-            Troop Number: <input type="text" name="number" class="form"><br>
-            <input type="submit" value="Delete Troop" class="form">
-        </form>
+            ID: <input type="number" name="troop" class="form"><br>
+            <input type="submit" value="Search" class="form">
+           </form>
     </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

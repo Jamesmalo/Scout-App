@@ -18,7 +18,7 @@ if ($conn->connect_error) {
   die('Connection failed: ' . $conn->connect_error);
 }
 
-$sql="SELECT  number, name, council, num_scouts, total_service, total_camping, zip, num_leaders FROM scouts WHERE number LIKE '$troop'";
+$sql="SELECT  number, name, council, num_scouts, total_service, total_camping, zip, num_leaders FROM troops WHERE number LIKE '$troop'";
 $result = $conn->query($sql);
   
 if ($result->num_rows > 0){
